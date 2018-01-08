@@ -51,7 +51,7 @@
     - name: generate ceph configuration file
       action: config_template
       args:
-        src: "roles/ceph-common/templates/ceph.conf.j2"
+        src: "roles/ceph-config/templates/ceph.conf.j2"
         dest: "/etc/ceph/{{ cluster_name.stdout }}.conf"
         owner: "{{ ceph_conf_stat.stat.pw_name }}"
         group: "{{ ceph_conf_stat.stat.gr_name }}"
